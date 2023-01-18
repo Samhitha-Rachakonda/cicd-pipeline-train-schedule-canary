@@ -22,11 +22,10 @@ metadata:
     app: train-schedule
     track: canary
 spec:
-  replicas: 2
+  replicas: $CANARY_REPLICAS
   selector:
     matchLabels:
       app: train-schedule
-      track: canary
   template:
     metadata:
       labels:
